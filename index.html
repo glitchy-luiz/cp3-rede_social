@@ -8,35 +8,39 @@
     <title>CP3 - rede social</title>
 </head>
 <body>
-    <form action="">
-        <label for="inputTexto">Digite seu post:</label>
-        <textarea placeholder="O que você está pensando hoje?" id="inputTexto"> </textarea>
-        <label for="selectCategoria">Categoria:</label>
-        <select name="categorias" id="selectCategoria">
-            <option value="todos">todos</option>
-            <option value="noticias">noticias</option>
-            <option value="eventos">eventos</option>
-            <option value="dicas">dicas</option>
-        </select>
-        <label for="img1">Insira um imagem (url):</label>
-        <input type="url" name="img1" id="img1" placeholder="Insira a url aqui">
-        <label for="img2">Insira um imagem (url):</label>
-        <input type="url" name="img2" id="img2" placeholder="Insira a url aqui">
-        <label for="img3">Insira um imagem (url):</label>
-        <input type="url" name="img3" id="img3" placeholder="Insira a url aqui">
-        
-        <button id="btnCriar">botão</button>
-    </form>
+    <div class="content">
+        <form action="" class="formulario">
+            <label for="inputTexto">Digite seu post:</label>
+            <textarea placeholder="O que você está pensando hoje?" id="inputTexto"> </textarea>
+            <label for="selectCategoria">Categoria:</label>
+            <select name="categorias" id="selectCategoria">
+                <option value="todos">todos</option>
+                <option value="noticias">noticias</option>
+                <option value="eventos">eventos</option>
+                <option value="dicas">dicas</option>
+            </select>
+            <label for="img1">Insira um imagem (url):</label>
+            <input type="url" name="img1" id="img1" placeholder="Insira a url aqui">
+            <label for="img2">Insira um imagem (url):</label>
+            <input type="url" name="img2" id="img2" placeholder="Insira a url aqui">
+            <label for="img3">Insira um imagem (url):</label>
+            <input type="url" name="img3" id="img3" placeholder="Insira a url aqui">
+            
+            <button id="btnCriar">botão</button>
+        </form>
 
-    <label for="filtroCategoria">Filtar: </label>
-    <select name="categorias" id="filtroCategoria">
-        <option value="todos">todos</option>
-        <option value="noticias">noticias</option>
-        <option value="eventos">eventos</option>
-        <option value="dicas">dicas</option>
-    </select>
+        <div class="filtro">
+            <label for="filtroCategoria">Filtrar categoria: </label>
+            <select name="categorias" id="filtroCategoria">
+                <option value="todos">todos</option>
+                <option value="noticias">noticias</option>
+                <option value="eventos">eventos</option>
+                <option value="dicas">dicas</option>
+            </select>
+        </div>
 
-    <ul id="listaPosts"></ul>
+        <ul id="listaPosts"></ul>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

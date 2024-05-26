@@ -1,4 +1,42 @@
 .tamanhoimg{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 50px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btnCriar{
+    margin-top: 20px;
+    border-style: none;
+    background-color: blueviolet;
+}
+
+.filtro{
+    margin-top: 40px;
+}
+
+.post{
+    display: flex;
+    justify-content: center;
+}
+.infopost{
+    display: flex;
+    flex-direction: column;
 }

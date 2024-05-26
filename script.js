@@ -59,34 +59,40 @@ function renderizarNaTela(){
     posts.forEach(
         post => {
             let novoPost = document.createElement('li')
-            novoPost.innerHTML = `<h1>${post.texto}</h1>
+            novoPost.innerHTML = `
+            
+            <div class='post'>
+                <div class='infopost'>
+                    <h1>${post.texto}</h1>
 
-            <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active tamanhoimg">
-                    <img src="${post.img1}" class="d-block w-100" alt="...">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active tamanhoimg">
+                            <img src="${post.img1}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item tamanhoimg">
+                            <img src="${post.img2}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item tamanhoimg">
+                            <img src="${post.img3}" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="carousel-item tamanhoimg">
-                    <img src="${post.img2}" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item tamanhoimg">
-                    <img src="${post.img3}" class="d-block w-100" alt="...">
-                    </div>
+
+                    <p>Categoria: ${post.categoria}</p>
+                    <p>Data e hora: ${post.hora}</p>
+                    <button onClick='editarPost(${posts.indexOf(post)})'> Editar </button>
+                    <button onClick='apagarPost(${posts.indexOf(post)})'> Apagar </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-            <p>Categoria: ${post.categoria}</p>
-            <p>Data e hora: ${post.hora}</p>
-            <button onClick='editarPost(${posts.indexOf(post)})'> Editar </button>
-            <button onClick='apagarPost(${posts.indexOf(post)})'> Apagar </button>`
+            </div>`
 
             if (post.categoria === filtroCategoria.value){
                 listaPosts.append(novoPost)
